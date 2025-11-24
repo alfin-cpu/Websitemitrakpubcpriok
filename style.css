@@ -1,0 +1,120 @@
+/* Definisi Warna Dasar */
+:root {
+    --primary-color: #004d99; /* Biru Tua/Navy yang Profesional */
+    --secondary-color: #f0f0f5; /* Abu-abu Sangat Terang (Digunakan sebagai background kartu sekunder) */
+    --text-dark: #333;
+    --text-light: #fff;
+    --background-page: #e9ecef; /* Latar Belakang halaman */
+    --container-color: #ffffff; /* Warna Kontainer Aplikasi */
+}
+
+/* Pengaturan Body dan Layout Utama */
+body {
+    background-color: var(--background-page);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: flex-start; /* Mulai dari atas */
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.app-container {
+    width: 95%;
+    max-width: 450px; /* Batasan lebar untuk fokus di perangkat mobile */
+    background-color: var(--container-color);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1); /* Bayangan kontainer */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* HEADER MODERN (Blok Biru Tua) */
+.modern-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.logo {
+    width: 65px; /* Ukuran logo disesuaikan */
+    height: 65px;
+    margin-right: 15px;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.header-text h1 {
+    margin: 3px 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.header-text h2 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+
+/* MENU BERBENTUK KARTU */
+.menu-grid {
+    display: grid;
+    gap: 18px; /* Jarak antar kartu */
+}
+
+.menu-card {
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px); /* Efek angkat saat disentuh */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 600;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.icon {
+    font-size: 2.2em;
+    width: 40px; /* Lebar ikon untuk penataan yang rapi */
+    margin-right: 15px;
+    text-align: center;
+}
+
+/* Gaya Warna Kartu */
+.menu-card.primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+.menu-card.secondary {
+    background-color: var(--container-color);
+    color: var(--text-dark);
+    border: 1px solid #ddd;
+}
+.menu-card.secondary .icon {
+    /* Mengganti warna ikon pada kartu sekunder (opsional) */
+    color: var(--primary-color); 
+}
