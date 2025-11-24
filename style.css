@@ -55,14 +55,15 @@ body {
     opacity: 0.8;
 }
 
-.header-text h1 {
+/* Mengubah teks Judul Header menjadi Kapital */
+.header-text h1, .header-text h2 {
+    text-transform: uppercase; /* MODIFIKASI: Huruf Besar */
     margin: 3px 0;
     font-size: 1.4em;
     font-weight: 700;
     line-height: 1.2;
 }
 .header-text h2 {
-    margin: 0;
     font-size: 1em;
     font-weight: 400;
 }
@@ -95,6 +96,9 @@ body {
     font-weight: 600;
     flex-grow: 1;
     text-align: left;
+    
+    /* MODIFIKASI PENTING: Mengubah Teks Menu menjadi Kapital */
+    text-transform: uppercase; 
 }
 
 .icon {
@@ -115,6 +119,5 @@ body {
     border: 1px solid #ddd;
 }
 .menu-card.secondary .icon {
-    /* Mengganti warna ikon pada kartu sekunder (opsional) */
     color: var(--primary-color); 
 }
